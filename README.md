@@ -52,10 +52,10 @@ An executable control script (`career.sh`) is included in the project root with 
 ## Preview
 
 ### Split View (Master Bank & Live Preview)
-![Split View](screenshots/split_view.png)
+![Split View](./images/split_view.png)
 
 ### Job Applications Tracker
-![Applications Tracker](screenshots/tracker_grid.png)
+![Applications Tracker](./images/tracker_grid.png)
 
 
 ---
