@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker & Resume Builder</title>
+    <meta name="description" content="An interactive job application tracker and modular resume builder with live document preview, contact management, follow-up radar, and recruiter email scanner." />
+    <meta property="og:title" content="Job Application Tracker & Resume Builder" />
+    <meta property="og:description" content="An interactive job application tracker and modular resume builder with live document preview, contact management, follow-up radar, and recruiter email scanner." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Defensive patch: Ensure window.fetch has both getter and setter
+      // so polyfills or third-party wrappers cannot fail with "Cannot set property fetch of #<Window> which has only a getter"
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          var fetchDescriptor = {
+            get: function() {
+              return _origFetch;
+            },
+            set: function(fn) {
+              _origFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          };
+          Object.defineProperty(window, 'fetch', fetchDescriptor);
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', fetchDescriptor);
+            } catch (_) {}
+          }
+        } catch (e) {
+          // Graceful fallback
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

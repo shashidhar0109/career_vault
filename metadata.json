@@ -1,0 +1,6 @@
+{
+  "name": "Job Application Tracker & Resume Builder",
+  "description": "An interactive job application tracker and modular resume builder with live document preview, contact management, follow-up radar, and recruiter email scanner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
